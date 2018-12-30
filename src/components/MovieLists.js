@@ -1,5 +1,7 @@
-import React from 'react';
-import Card from "./MovieListComponents/Card";
+// import React from 'react';
+import React, { Component } from 'react';
+// import Card from "./MovieListComponents/Card";
+import ListApp from './MovieListComponents/ListApp';
 
 const MovieLists = () => {
     return (
@@ -21,14 +23,7 @@ const MovieLists = () => {
             </nav>
             <section className="main-container">
                 <section className="movie-section" id="movie-section">
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
+                    <ListApp />
                 </section>
                 <section className="btns-container" id="btns-container">
                     <button className="btns-container__btn btns-container__btn--left" id="prevBtn"><span className="fas fa-caret-left"></span></button>
