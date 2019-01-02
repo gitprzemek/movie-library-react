@@ -21,15 +21,20 @@ class ListApp extends Component {
             // let movieApi = resp;
             // let movieResult = resp.results;
             // let maxLength = resp.total_pages;       
-    })};
+    })
+    
+    
+};
+
 
     render() {
         var {isLoaded, items} = this.state;
         
         return (
-            <div>
+            <div className="movie-section" id="movie-section">
                 {items.map( (item) => ( <Card key={item.id} item={item} /> ) )};
             </div>
+            
         );
     }
 }

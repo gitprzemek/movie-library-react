@@ -22,9 +22,7 @@ const MovieLists = () => {
 
             </nav>
             <section className="main-container">
-                <section className="movie-section" id="movie-section">
-                    <ListApp />
-                </section>
+                <ListApp />
                 <section className="btns-container" id="btns-container">
                     <button className="btns-container__btn btns-container__btn--left" id="prevBtn"><span className="fas fa-caret-left"></span></button>
                     <button className="btns-container__btn btns-container__btn--right" id="nextBtn"><span className="fas fa-caret-right"></span></button>
