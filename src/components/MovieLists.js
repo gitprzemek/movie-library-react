@@ -2,25 +2,13 @@
 import React, { Component } from 'react';
 // import Card from "./MovieListComponents/Card";
 import ListApp from './MovieListComponents/ListApp';
+import Navigation from "./MovieListComponents/Nav";
 
 const MovieLists = () => {
     return (
-        <div>
-            <nav className="navigation">
-                <a href="index.html" className="navigation__link navigation__link--back"><span className="fas fa-angle-left navigation__icon"></span></a>
-                <button id="navBtnOpen" className="navigation__link navigation__link--list"><span className="fas fa-bars navigation__icon"></span>
-                    <span className="navigation__title">MOVIE LISTS</span></button>
-                <div id="navList" className="navigation__list">
-                    <button id="navBtnClose" className="navigation__list-btn"><span className="fas fa-times"></span></button>
-                    <div className="navigation__list-cont">
-                        {/*<a href="#" className="navigation__list-item" id="popular">Most popular</a>
-                        <a href="#" className="navigation__list-item" id="nowPlaying">Now playing</a>
-                        <a href="#" className="navigation__list-item" id="topRated">Top rated</a>
-    <a href="#" className="navigation__list-item" id="upcoming">Upcoming</a>*/}
-                    </div>
-                </div>
 
-            </nav>
+        <div>
+            <Navigation/>
             <section className="main-container">
                 <ListApp />
                 <section className="btns-container" id="btns-container">
