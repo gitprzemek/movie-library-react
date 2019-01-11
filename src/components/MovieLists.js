@@ -3,27 +3,35 @@ import React, { Component } from 'react';
 // import Card from "./MovieListComponents/Card";
 import ListApp from './MovieListComponents/ListApp';
 import Navigation from "./MovieListComponents/Nav";
+import Search from './MovieListComponents/Search';
 
-const MovieLists = () => {
-    return (
+class MovieLists extends Component{
+    constructor(){
+        super();
+        this.state = {
+            data : ""
+        }
+    }
+    getUrl(url){
+        this.setState({
+            data: url
+        })
+    }
+    
+    render(){
+        return (
 
-        <div>
-            <Navigation/>
-            <section className="main-container">
-                <ListApp />
-                <section className="btns-container" id="btns-container">
-                    <button className="btns-container__btn btns-container__btn--left" id="prevBtn"><span className="fas fa-caret-left"></span></button>
-                    <button className="btns-container__btn btns-container__btn--right" id="nextBtn"><span className="fas fa-caret-right"></span></button>
+            <div>
+                <Navigation callback={this.getUrl.bind(this)} />
+                <section className="main-container">
+                    <ListApp data={this.state.data} />
+                    
                 </section>
+                <Search/>
+            </div>
+        )
 
-            </section>
-            <section className="search-section">
-                <form role="search" className="search-form">
-                    <input type="text" size="10" className="search-form__input" id="search-form__input" placeholder="Search..." />
-                    <button type="button" className="search-form__btn" id="search-form__btn"><span className="fas fa-search search-form__icon"></span></button>
-                </form>
-            </section>
-        </div>
-    )
+    }
+    
 }
 export default MovieLists;
